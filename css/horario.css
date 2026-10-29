@@ -1,0 +1,79 @@
+* { box-sizing: border-box; } 
+
+body {
+
+  font-family: "Roboto Mono", monospace;
+  background-color: #F4F4F9;
+  color: #333333;
+}
+body {
+  margin: 0;
+  min-height: 100vh;        /* el body mide al menos toda la pantalla */
+  display: flex;
+  flex-direction: column;   /* header, main y footer uno debajo del otro */
+}
+
+main {
+  flex: 1;                  /* main crece y ocupa todo el espacio que sobra */
+}
+
+header {
+  background-color: #586F7C;
+  color: white;
+  text-align: center;
+}
+nav a {
+  color: white;
+  text-decoration: none;  /* quita el subrayado */
+  font-weight: bold;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 15px;
+}
+nav a:hover { text-decoration: underline; }
+
+.portada h2 {
+  color: #2F4550;
+  border-bottom: 2px solid #2F4550;
+  text-align: center;
+}
+.timetable {
+
+background: white; 
+border-radius: 10px;
+overflow: hidden; 
+box-shadow: 8 4px 10px rgba(0,0,0,0.1);
+
+}
+ .timetable table {
+
+width: 100%;
+border-collapse: collapse;
+text-align: center;
+
+ }
+
+.timetable th, td{
+padding: 12px 15px;
+border: 1px solid #ddd;
+text-align: center;
+    
+} 
+th {
+background: #3498db;
+
+}
+
+
+tr:nth-child(even){ background: #f9f9f9;
+
+}
+#contacto {
+  background-color: #222222;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+}

@@ -1,0 +1,94 @@
+* { box-sizing: border-box; }
+body {
+
+  font-family: "Roboto Mono", monospace;
+  background-color: #f4f4f4;
+  color: #333333;
+}
+body {
+  margin: 0;
+  min-height: 100vh;        /* el body mide al menos toda la pantalla */
+  display: flex;
+  flex-direction: column;   /* header, main y footer uno debajo del otro */
+}
+
+main {
+  flex: 1;                  /* main crece y ocupa todo el espacio que sobra */
+}
+
+header {
+  background-color: #0b5394;
+  color: white;
+  text-align: center;
+}
+nav a {
+  color: white;
+  text-decoration: none;  /* quita el subrayado */
+  font-weight: bold;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 15px;
+}
+nav a:hover { text-decoration: underline; }
+
+h1 {
+  color: #0b5394;
+  border-bottom: 2px solid #0b5394;
+  text-align: center;
+}
+
+#carreras h2{
+text-align: center;
+
+}
+#sabias h3,p {
+text-align: center;
+
+}
+#contacto {
+  background-color: #0b5394;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+}
+.contenedor {
+  display: flex;            /* activa Flexbox */
+  gap: 20px;                /* espacio entre tarjetas */
+  justify-content: center;  /* centra en horizontal */
+  align-items: center;       /*centra en vertical */
+  min-height: 70vh;         
+}
+.tarjeta {
+  width: 250px;
+  padding: 20px;
+  border: 1px solid #dddddd;
+  border-radius: 12px;      /* esquinas redondeadas */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* sombra */
+  background-color: white;
+  justify-content: center;
+}
+.portada img { 
+
+    display: block;
+    width: 100%;
+    max-width: 50%;
+    height: auto;
+    margin: 0 auto;
+
+}
+.tarjeta { transition: transform 0.3s, box-shadow 0.3s; }
+.tarjeta:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+/*@keyframes define cómo cambia un elemento
+ durante la animación; animation indica qué animación aplicar,
+  cuánto dura y cómo se desarrolla en el tiempo.*/
+.portada { animation: aparecer 1s ease-out; }
